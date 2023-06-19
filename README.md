@@ -9,10 +9,20 @@ Manual:
 - Download the Source, then u need to Download all ffmpeg.exe files from https://github.com/SaoasBlubb/Multi-Downloader/releases/tag/v1.0.0 and paste them into "lib" folder!
 
 
+# How to Use!
+Just run the YouTube_Spotify_Downloader.exe file!
 
+
+
+
+Using Auto Installer:
 ![Install](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/04323797-1231-4d06-a680-7390a6f06b30)
 
-- After Installation go into the YouTube_Spotify_Downloader folder and run YouTube_Spotify_Downloader.exe!
+
+
+Some Pictures:
+
+
 
 # How to Use!
 - Just run the YouTube_Spotify_Downloader.exe file!

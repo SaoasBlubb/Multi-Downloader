@@ -3,7 +3,6 @@
 
 # Installation!
 - Download the Installer and run it https://github.com/SaoasBlubb/Multi-Downloader/raw/main/Installer.exe!
-- Chrome Browser and SmartScreen will Pop-Up but there is nothing you can also make Virus scan, its no Virus!
 
 ![Install](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/04323797-1231-4d06-a680-7390a6f06b30)
 

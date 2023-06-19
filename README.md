@@ -1,18 +1,18 @@
 # Multi-Downloader
-- A Downloader Tool for Downloading Songs, Videos, Playlists from Spotify, YouTube, Soundcloud and any other Website!
+
+A Downloader Tool for Downloading Songs, Videos, Playlists from Spotify, YouTube, Soundcloud and any other Website!
 
 # Installation!
+
 Full Auto (Easiest Way!:
 - Download the Installer and run it https://github.com/SaoasBlubb/Multi-Downloader/releases/download/v1.0.0/Installer.exe!
 
 Manual:
 - Download the Source, then u need to Download all ffmpeg.exe files from https://github.com/SaoasBlubb/Multi-Downloader/releases/tag/v1.0.0 and paste them into "lib" folder!
 
-
 # How to Use!
+
 Just run the YouTube_Spotify_Downloader.exe file!
-
-
 
 
 Using Auto Installer:

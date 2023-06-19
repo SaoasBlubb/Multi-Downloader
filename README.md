@@ -2,7 +2,8 @@
 - A Downloader Tool for Downloading Songs, Videos, Playlists from Spotify, YouTube, Soundcloud and any other Website!
 
 # Installation!
-- Download the Installer and run it https://github.com/SaoasBlubb/Multi-Downloader/raw/main/Installer.exe!
+- Download the Installer and run it https://github.com/SaoasBlubb/Multi-Downloader/releases/download/v1.0.0/Installer.exe!
+
 
 ![Install](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/04323797-1231-4d06-a680-7390a6f06b30)
 
@@ -10,6 +11,7 @@
 
 # How to Use!
 - Just run the YouTube_Spotify_Downloader.exe file!
+
 
 ![Main_Menu](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/8ac4c5b8-7f18-4d9f-860e-75a33e693cf2)
 

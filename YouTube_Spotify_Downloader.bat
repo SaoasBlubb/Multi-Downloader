@@ -172,20 +172,12 @@ rem ShadeBoxAt 13 40 1 2 2
 
 rem Wait 30
 REM COPY MORE FILES HERE
-youtube-dl -q -U 2>&1>nul
+
 rem ShadeBoxAt 13 42 1 2 2
 
 rem Wait 30
 REM COPY MORE FILES HERE
-git clone https://github.com/spotDL/spotify-downloader -O C:Saoas && cd spotify-downloader 2>&1>nul
-pip install poetry 2>&1>nul
-poetry install 2>&1>nul
-poetry run python scripts/build.py 2>&1>nul
-cd spotify-downloader/dist
-call xcopy * ..\.. /s /e /Y 2>&1>nul
-cd ..\.. 2>&1>nul
-rmdir spotify-downloader /S /Q 2>&1>nul
-spotdl --download-ffmpeg 2>&1>nul
+
 rem ShadeBoxAt 13 44 1 2 2
 
 rem Wait 30
@@ -207,8 +199,7 @@ goto Menu
 
 REM :update
 REM Echo Updating...
-REM yt-dlp -q -U 2>nul
-REM youtube-dl -q -U 2>nul
+REM yt-dlp -q -U 2>&1>nul
 REM spotdl --check-for-updates >nul
 
 mode con:cols=80 lines=25

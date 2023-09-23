@@ -145,27 +145,27 @@ rem ChangeColor 0 %FGcol%
 
 rem Wait 30
 REM COPY FILES HERE
-mkdir Update
+mkdir Update 2>&1>nul
 rem ShadeBoxAt 13 32 1 2 2
-wget https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/YouTube_Spotify_Downloader.exe Update\YouTube_Spotify_Downloader.exe
+wget -F -q https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/YouTube_Spotify_Downloader.exe -O Update\YouTube_Spotify_Downloader.exe
 rem Wait 30
 REM COPY MORE FILES HERE
-cd Update
+cd Update 2>&1>nul
 rem ShadeBoxAt 13 34 1 2 2
 rem Wait 30
 REM COPY MORE FILES HERE
-ren YouTube_Spotify_Downloader.exe YouTube_Spotify_Downloader.exe.new
+ren YouTube_Spotify_Downloader.exe YouTube_Spotify_Downloader.exe.new 2>&1>nul
 rem ShadeBoxAt 13 36 1 2 2
-call xcopy * ..\.. /s /e /Y
+move /Y * .. 2>&1>nul
 rem Wait 30
 REM COPY MORE FILES HERE
-cd ..\.. 
-rmdir /S /Q Update
+cd .. 2>&1>nul
+rd /s /q Update 2>&1>nul
 rem ShadeBoxAt 13 38 1 2 2
-cd C:\Saoas
+cd C:\Saoas 2>&1>nul
 rem Wait 30
 REM COPY MORE FILES HERE
-yt-dlp -q -U
+yt-dlp -q -U 2>&1>nul
 rem ShadeBoxAt 13 40 1 2 2
 
 rem Wait 30
@@ -175,20 +175,20 @@ rem ShadeBoxAt 13 42 1 2 2
 
 rem Wait 30
 REM COPY MORE FILES HERE
-pip install --upgrade spotdl
+pip install --upgrade spotdl 2>&1>nul
 rem ShadeBoxAt 13 44 1 2 2
 
 rem Wait 30
 REM COPY MORE FILES HERE
 
-start update.exe
 rem ShadeBoxAt 13 46 1 2 2
 
 rem Wait 30
 REM COPY MORE FILES HERE
-del C:\Saoas\*.old
+del C:\Saoas\*.old 2>&1>nul
 rem ShadeBoxAt 13 48 1 2 2
-
+cd /D "%~dp0" 2>&1>nul
+start update.exe 2>&1>nul
 rem ClearColor
 rem Locate 25 1
 

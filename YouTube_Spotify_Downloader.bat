@@ -177,7 +177,7 @@ rem ShadeBoxAt 13 42 1 2 2
 
 rem Wait 30
 REM COPY MORE FILES HERE
-
+pip install --upgrade spotdl
 rem ShadeBoxAt 13 44 1 2 2
 
 rem Wait 30

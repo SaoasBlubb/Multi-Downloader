@@ -13,7 +13,7 @@ cmd /c choco install git -y
 
 setx PATH "C:\Program Files\Git\cmd;%PATH%" 2>&1>nul
 
-cmd /c wget --limit-rate=50M https://www.python.org/ftp/python/3.11.5/python-3.11.5-amd64.exe
+cmd /c wget --limit-rate=100M https://www.python.org/ftp/python/3.11.5/python-3.11.5-amd64.exe
 cmd /c python-3.11.5-amd64.exe /quiet InstallAllUsers=1 PrependPath=1
 setx PATH "%userprofile%\AppData\Local\Programs\Python\Python311;%PATH%" 2>&1>nul
 setx PATH "C:\Program Files\Python311\Scripts;%PATH%" 2>&1>nul
@@ -27,16 +27,16 @@ REM cmd /c pip install poetry
 REM cmd /c poetry install
 REM cmd /c poetry run python scripts/build.py
 REM cd dist
-cmd /c wget --limit-rate=50M https://github.com/spotDL/spotify-downloader/releases/latest/download/spotdl-4.2.1-win32.exe -O spotdl.exe
+cmd /c wget --limit-rate=100M https://github.com/spotDL/spotify-downloader/releases/latest/download/spotdl-4.2.1-win32.exe -O spotdl.exe
 REM ren * spotdl.exe
 REM call xcopy * ..\.. /s /e /Y
 REM cd ..\..
 REM rmdir spotify-downloader /S /Q 
 REM del get-pip.py python-3.11.5-amd64.exe
 
-cmd /c wget --limit-rate=50M https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe -O yt-dlp.exe
+cmd /c wget --limit-rate=100M https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe -O yt-dlp.exe
 
-cmd /c wget --limit-rate=50M https://github.com/BtbN/FFmpeg-Builds/releases/latest/download/ffmpeg-master-latest-win64-gpl.zip
+cmd /c wget --limit-rate=100M https://github.com/BtbN/FFmpeg-Builds/releases/latest/download/ffmpeg-master-latest-win64-gpl.zip
 tar -xf ffmpeg-master-latest-win64-gpl.zip
 cd ffmpeg-master-latest-win64-gpl/bin
 call xcopy * ..\.. /s /e /Y
@@ -46,9 +46,9 @@ del ffmpeg-master-latest-win64-gpl.zip get-pip.py python-3.11.5-amd64.exe
 
 cd ..
 
-cmd /c wget --limit-rate=50M https://github.com/SaoasBlubb/Multi-Downloader/releases/download/v2.0.0/YouTube_Spotify_Downloader.exe
-cmd /c wget --limit-rate=50M https://github.com/SaoasBlubb/Multi-Downloader/releases/download/v2.0.0/setup.exe
-cmd /c wget --limit-rate=50M https://github.com/SaoasBlubb/Multi-Downloader/releases/download/v2.0.0/update.exe
+cmd /c wget --limit-rate=100M https://github.com/SaoasBlubb/Multi-Downloader/releases/download/v2.0.0/YouTube_Spotify_Downloader.exe
+cmd /c wget --limit-rate=100M https://github.com/SaoasBlubb/Multi-Downloader/releases/download/v2.0.0/setup.exe
+cmd /c wget --limit-rate=100M https://github.com/SaoasBlubb/Multi-Downloader/releases/download/v2.0.0/update.exe
 
 start setup.exe 2>&1>nul
 exit

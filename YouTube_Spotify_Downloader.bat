@@ -147,7 +147,7 @@ rem Wait 30
 REM COPY FILES HERE
 mkdir Update 2>&1>nul
 rem ShadeBoxAt 13 32 1 2 2
-wget --limit-rate=100M https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/YouTube_Spotify_Downloader.exe Update\YouTube_Spotify_Downloader.exe 2>&1>nul
+wget https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/YouTube_Spotify_Downloader.exe Update\YouTube_Spotify_Downloader.exe 2>&1>nul
 rem Wait 30
 REM COPY MORE FILES HERE
 cd Update 2>&1>nul
@@ -162,7 +162,7 @@ REM COPY MORE FILES HERE
 cd ..\.. 2>&1>nul
 rmdir Update /S /Q 2>&1>nul
 rem ShadeBoxAt 13 38 1 2 2
-
+cd C:\Saoas
 rem Wait 30
 REM COPY MORE FILES HERE
 yt-dlp -q -U 2>&1>nul
@@ -448,7 +448,7 @@ ECHO.
 SET /P URL="!ESC![90m[Enter URL]:!ESC![33m "
 ECHO.
 ECHO !ESC![35mStarting Download...
-spotdl --bitrate 320k --output "Downloads/Spotify/Playlists/{list-name}/{title}.{output-ext}" download %URL%
+python -m python -m spotdl --bitrate 320k --output "Downloads/Spotify/Playlists/{list-name}/{title}.{output-ext}" download %URL%
 ECHO.
 ECHO !ESC![32mDone!
 timeout 2 >nul

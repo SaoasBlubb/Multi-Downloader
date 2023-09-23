@@ -164,10 +164,10 @@ REM COPY MORE FILES HERE
 cd ..\.. 2>&1>nul
 rmdir Update /S /Q 2>&1>nul
 rem ShadeBoxAt 13 38 1 2 2
-yt-dlp -q -U 2>&1>nul
+
 rem Wait 30
 REM COPY MORE FILES HERE
-
+yt-dlp -U 2>&1>nul
 rem ShadeBoxAt 13 40 1 2 2
 
 rem Wait 30
@@ -177,12 +177,20 @@ rem ShadeBoxAt 13 42 1 2 2
 
 rem Wait 30
 REM COPY MORE FILES HERE
-git clone https://git.ffmpeg.org/ffmpeg.git C:Saoas
+git clone https://github.com/spotDL/spotify-downloader -O C:Saoas && cd spotify-downloader 2>&1>nul
+pip install poetry 2>&1>nul
+poetry install 2>&1>nul
+poetry run python scripts/build.py 2>&1>nul
+cd spotify-downloader/dist
+call xcopy * ..\.. /s /e /Y 2>&1>nul
+cd ..\.. 2>&1>nul
+rmdir spotify-downloader /S /Q 2>&1>nul
+spotdl --download-ffmpeg 2>&1>nul
 rem ShadeBoxAt 13 44 1 2 2
-python -m pip install --upgrade pip 2>&1>nul
+
 rem Wait 30
 REM COPY MORE FILES HERE
-pip install --upgrade spotdl 2>&1>nul
+
 
 rem ShadeBoxAt 13 46 1 2 2
 

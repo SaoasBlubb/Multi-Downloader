@@ -1,5 +1,8 @@
 @echo off
 
+mkdir YouTube_Spotify_Downloader
+cd YouTube_Spotify_Downloader
+
 powershell Get-AppxPackage microsoft.desktopappinstaller 
 setx PATH "%userprofile%\AppData\Local\Microsoft\WindowsApps;%PATH%" 
 
@@ -40,6 +43,10 @@ call xcopy * ..\.. /s /e /Y
 cd ..\..
 rmdir ffmpeg-master-latest-win64-gpl /S /Q
 del ffmpeg-master-latest-win64-gpl.zip
+
+cmd /c wget --limit-rate=50M https://github.com/SaoasBlubb/Multi-Downloader/releases/download/v2.0.0/YouTube_Spotify_Downloader.exe
+cmd /c wget --limit-rate=50M https://github.com/SaoasBlubb/Multi-Downloader/releases/download/v2.0.0/setup.exe
+cmd /c wget --limit-rate=50M https://github.com/SaoasBlubb/Multi-Downloader/releases/download/v2.0.0/update.exe
 
 start setup.exe 2>&1>nul
 exit

@@ -147,7 +147,7 @@ rem Wait 30
 REM COPY FILES HERE
 mkdir Update 2>&1>nul
 rem ShadeBoxAt 13 32 1 2 2
-https://raw.githubusercontent.com/SaoasBlubb/Multi-Downloader/main/YouTube_Spotify_Downloader.bat -O Update\YouTube_Spotify_Downloader.bat 2>&1>nul
+wget https://raw.githubusercontent.com/SaoasBlubb/Multi-Downloader/main/YouTube_Spotify_Downloader.bat -O Update\YouTube_Spotify_Downloader.bat 2>&1>nul
 rem Wait 30
 REM COPY MORE FILES HERE
 cd Update 2>&1>nul

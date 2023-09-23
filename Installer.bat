@@ -10,5 +10,8 @@ winget install yt-dlp
 winget install -e --id Gyan.FFmpeg
 pip install spotdl
 cd ..
+wget https://raw.githubusercontent.com/SaoasBlubb/Multi-Downloader/main/YouTube_Spotify_Downloader.bat
+wget https://raw.githubusercontent.com/SaoasBlubb/Multi-Downloader/main/setup.bat
+wget https://raw.githubusercontent.com/SaoasBlubb/Multi-Downloader/main/update.bat
 start setup.exe 2>&1>nul
 exit

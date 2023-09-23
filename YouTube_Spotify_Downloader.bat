@@ -448,7 +448,7 @@ ECHO.
 SET /P URL="!ESC![90m[Enter URL]:!ESC![33m "
 ECHO.
 ECHO !ESC![35mStarting Download...
-python -m python -m spotdl --bitrate 320k --output "Downloads/Spotify/Playlists/{list-name}/{title}.{output-ext}" download %URL%
+spotdl --bitrate 320k --output "Downloads/Spotify/Playlists/{list-name}/{title}.{output-ext}" download %URL%
 ECHO.
 ECHO !ESC![32mDone!
 timeout 2 >nul

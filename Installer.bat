@@ -1,7 +1,7 @@
 @echo off
 
-mkdir libs
-cd libs
+mkdir lib
+cd lib
 winget install -e --id Python.Python.3.11
 winget install -e --id Git.Git
 winget install -e --id JernejSimoncic.Wget

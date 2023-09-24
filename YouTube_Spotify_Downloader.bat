@@ -295,7 +295,7 @@ ECHO.
 SET /P URL="!ESC![90m[Enter URL]:!ESC![33m "
 ECHO.
 ECHO !ESC![35mStarting Download...
-yt-dlp --no-warnings --newline --progress --no-playlist -o "Downloads/YouTube/Videos/%%(title)s.%%(ext)s" -f mp4 -i --ignore-config "%URL%"
+yt-dlp --no-warnings --newline --progress --no-playlist -o "Downloads/YouTube/Videos/%(title)s.%(ext)s" -f bestvideo+bestaudio/best -i --ignore-config "%URL%"
 ECHO.
 ECHO !ESC![32mDone!
 timeout 2 >nul
@@ -308,7 +308,7 @@ ECHO.
 SET /P URL="!ESC![90m[Enter URL]:!ESC![33m "
 ECHO.
 ECHO !ESC![35mStarting Download...
-yt-dlp --no-warnings -x --audio-format mp3 --audio-quality 320k --newline --progress --no-playlist -o "Downloads/YouTube/Songs/%%(title)s.%%(ext)s" -i --ignore-config "%URL%"
+yt-dlp --no-warnings -x --audio-format mp3 --audio-quality 320k --newline --progress --no-playlist -o "Downloads/YouTube/Songs/%(title)s.%(ext)s" -i --ignore-config "%URL%"
 ECHO.
 ECHO !ESC![32mDone!
 timeout 2 >nul
@@ -365,7 +365,7 @@ ECHO.
 SET /P URL="!ESC![90m[Enter URL]:!ESC![33m "
 ECHO.
 ECHO !ESC![35mStarting Download...
-yt-dlp --no-warnings --newline --progress --yes-playlist -o "Downloads/YouTube/Videos/Playlists/%%(playlist)s/%%(title)s.%%(ext)s" -f mp4 -i --ignore-config "%URL%"
+yt-dlp --no-warnings --newline --progress --yes-playlist -o "Downloads/YouTube/Videos/Playlists/%(playlist)s/%(title)s.%(ext)s" -f bestvideo+bestaudio/best -i --ignore-config "%URL%"
 ECHO.
 ECHO !ESC![32mDone!
 timeout 2 >nul
@@ -378,7 +378,7 @@ ECHO.
 SET /P URL="!ESC![90m[Enter URL]:!ESC![33m "
 ECHO.
 ECHO !ESC![35mStarting Download...
-yt-dlp --no-warnings -x --audio-format mp3 --audio-quality 320k --newline --progress --yes-playlist -o "Downloads/YouTube/Playlists/%%(playlist)s/%%(title)s.%%(ext)s" -i --ignore-config "%URL%"
+yt-dlp --no-warnings -x --audio-format mp3 --audio-quality 320k --newline --progress --yes-playlist -o "Downloads/YouTube/Songs/Playlists/%(playlist)s/%(title)s.%(ext)s" -i --ignore-config "%URL%"
 ECHO.
 ECHO !ESC![32mDone!
 timeout 2 >nul
@@ -500,7 +500,10 @@ ECHO.
 SET /P URL="!ESC![90m[Enter URL]:!ESC![33m "
 ECHO.
 ECHO !ESC![35mStarting Download...
-youtube-dl --no-warnings --newline -o "Downloads/Websites/Videos/%%(title)s.%%(ext)s" -f bestvideo+bestaudio/best -i --ignore-config "%URL%"
+yt-dlp --no-warnings --newline -o "Downloads/Websites/Videos/%(title)s.%(ext)s" -f bestvideo+bestaudio/best -i --ignore-config "%URL%"
+REM yt-dlp --no-warnings -x --audio-format mp3 --audio-quality 320k --newline -o "Downloads/Websites/Audios/%(title)s.%(ext)s" -i --ignore-config "%URL%"
+
+REM youtube-dl --no-warnings --newline -o "Downloads/Websites/Videos/%%(title)s.%%(ext)s" -f bestvideo+bestaudio/best -i --ignore-config "%URL%"
 ECHO.
 ECHO !ESC![32mDone!
 timeout 2 >nul
@@ -559,7 +562,8 @@ ECHO.
 SET /P URL="!ESC![90m[Enter URL]:!ESC![33m "
 ECHO.
 ECHO !ESC![35mStarting Download...
-youtube-dl --no-warnings --newline -o "Downloads/Soundcloud/Tracks/%%(title)s.%%(ext)s" -f bestvideo+bestaudio/best -i --ignore-config "%URL%"
+yt-dlp --no-warnings -x --audio-format mp3 --audio-quality 320k --newline --progress --no-playlist -o "Downloads/SoundCloud/Tracks/%(title)s.%(ext)s" -i --ignore-config "%URL%"
+REM youtube-dl --no-warnings --newline -o "Downloads/Soundcloud/Tracks/%%(title)s.%%(ext)s" -f bestvideo+bestaudio/best -i --ignore-config "%URL%"
 ECHO.
 ECHO !ESC![32mDone!
 timeout 2 >nul
@@ -572,7 +576,8 @@ ECHO.
 SET /P URL="!ESC![90m[Enter URL]:!ESC![33m "
 ECHO.
 ECHO !ESC![35mStarting Download...
-youtube-dl --no-warnings --newline -o "Downloads/Soundcloud/Playlists/%%(playlist)s/%%(title)s.%%(ext)s" -f bestvideo+bestaudio/best -i --ignore-config "%URL%"
+yt-dlp --no-warnings -x --audio-format mp3 --audio-quality 320k --newline --progress --yes-playlist -o "Downloads/SoundCloud/Playlists/%(playlist)s/%(title)s.%(ext)s" -i --ignore-config "%URL%"
+REM youtube-dl --no-warnings --newline -o "Downloads/Soundcloud/Playlists/%%(playlist)s/%%(title)s.%%(ext)s" -f bestvideo+bestaudio/best -i --ignore-config "%URL%"
 ECHO.
 ECHO !ESC![32mDone!
 timeout 2 >nul

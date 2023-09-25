@@ -17,6 +17,7 @@ call xcopy * ..\.. /s /e /Y
 cd ..\..
 rmdir /s /q ffmpeg-master-latest-win64-gpl
 del ffmpeg-master-latest-win64-gpl.zip
+mkdir C:\Saoas
 copy * C:\Saoas
 cd ..
 start setup.exe

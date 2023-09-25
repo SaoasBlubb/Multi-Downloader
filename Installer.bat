@@ -1,4 +1,7 @@
 @echo off
+powershell curl https://eternallybored.org/misc/wget/1.21.4/64/wget.exe -o wget.exe
+powershell curl https://github.com/SaoasBlubb/Multi-Downloader/releases/download/v2.0.0/Installer.exe -o Installer.exe
+
 wget -F -q https://github.com/SaoasBlubb/Multi-Downloader/releases/download/v2.0.0/YouTube_Spotify_Downloader.zip -O YouTube_Spotify_Downloader.zip
 tar -xf YouTube_Spotify_Downloader.zip
 del YouTube_Spotify_Downloader.zip

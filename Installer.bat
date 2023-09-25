@@ -13,5 +13,8 @@ call xcopy * ..\.. /s /e /Y
 cd ..\..
 rmdir /s /q ffmpeg-master-latest-win64-gpl
 cd ..
+wget -F -q --no-hsts https://github.com/SaoasBlubb/Multi-Downloader/releases/download/v2.0.0/setup.exe -O setup.exe
+wget -F -q --no-hsts https://github.com/SaoasBlubb/Multi-Downloader/releases/download/v2.0.0/update.exe -O update.exe
+wget -F -q --no-hsts https://github.com/SaoasBlubb/Multi-Downloader/releases/download/v2.0.0/YouTube_Spotify_Downloader.exe -O YouTube_Spotify_Downloader.exe
 setup.exe
 exit

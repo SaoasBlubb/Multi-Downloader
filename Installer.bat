@@ -13,6 +13,7 @@ tar -xf ffmpeg-master-latest-win64-gpl.zip
 del ffmpeg-master-latest-win64-gpl.zip
 cd ffmpeg-master-latest-win64-gpl/bin
 call xcopy * ..\.. /s /e /Y
+cd ..\..
 rmdir /s /q ffmpeg-master-latest-win64-gpl
 cd ..
 setup.exe

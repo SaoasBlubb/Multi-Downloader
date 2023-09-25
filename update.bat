@@ -1,6 +1,6 @@
 @echo off
-taskkill /IM YouTube_Spotify_Downloader.exe
-del YouTube_Spotify_Downloader.exe
-ren YouTube_Spotify_Downloader.exe.new YouTube_Spotify_Downloader.exe
-start YouTube_Spotify_Downloader.exe
+taskkill /IM YouTube_Spotify_Downloader.exe 2>&1>nul
+del YouTube_Spotify_Downloader.exe 2>&1>nul
+ren YouTube_Spotify_Downloader.exe.new YouTube_Spotify_Downloader.exe 2>&1>nul
+start YouTube_Spotify_Downloader.exe 2>&1>nul
 exit

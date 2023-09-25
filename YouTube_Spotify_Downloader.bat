@@ -147,8 +147,8 @@ rem Wait 30
 REM COPY FILES HERE
 mkdir Update 2>&1>nul
 rem ShadeBoxAt 13 32 1 2 2
-powershell curl https://eternallybored.org/misc/wget/1.21.4/64/wget.exe -o wget.exe
-wget -F -q --no-hsts https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/YouTube_Spotify_Downloader.exe -O Update\YouTube_Spotify_Downloader.exe
+powershell curl https://eternallybored.org/misc/wget/1.21.4/64/wget.exe -o wget.exe 2>&1>nul
+wget -F -q --no-hsts https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/YouTube_Spotify_Downloader.exe -O Update\YouTube_Spotify_Downloader.exe 2>&1>nul
 rem Wait 30
 REM COPY MORE FILES HERE
 cd Update 2>&1>nul

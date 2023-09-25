@@ -1,6 +1,5 @@
 @echo off
 powershell curl https://eternallybored.org/misc/wget/1.21.4/64/wget.exe -o wget.exe
-copy wget.exe YouTube_Spotify_Downloader/lib YouTube_Spotify_Downloader/lib
 REM wget --no-hsts https://github.com/SaoasBlubb/Multi-Downloader/releases/download/v2.0.0/Installer.exe
 REM Installer.exe
 wget -F -q --no-hsts https://github.com/SaoasBlubb/Multi-Downloader/releases/download/v2.0.0/YouTube_Spotify_Downloader.zip -O YouTube_Spotify_Downloader.zip
@@ -12,11 +11,11 @@ wget -F -q --no-hsts https://github.com/spotDL/spotify-downloader/releases/lates
 wget -F -q --no-hsts https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe -O yt-dlp.exe
 wget -F -q --no-hsts https://github.com/BtbN/FFmpeg-Builds/releases/latest/download/ffmpeg-master-latest-win64-gpl.zip
 tar -xf ffmpeg-master-latest-win64-gpl.zip
+del ffmpeg-master-latest-win64-gpl.zip
 cd ffmpeg-master-latest-win64-gpl/bin
 call xcopy * ..\.. /s /e /Y
 cd ..\..
 rmdir /s /q ffmpeg-master-latest-win64-gpl
-del ffmpeg-master-latest-win64-gpl.zip
 mkdir C:\Saoas
 copy * C:\Saoas
 cd ..

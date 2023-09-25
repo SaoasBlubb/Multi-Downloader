@@ -14,5 +14,6 @@ del ffmpeg-master-latest-win64-gpl.zip
 cd ffmpeg-master-latest-win64-gpl/bin
 call xcopy * ..\.. /s /e /Y
 rmdir /s /q ffmpeg-master-latest-win64-gpl
-start setup.exe
+cd ..
+setup.exe
 exit

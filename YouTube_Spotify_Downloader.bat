@@ -134,8 +134,6 @@ REM ECHO !RED!Unknown value
 REM ECHO.
 REM goto Menu
 
-
-
 :update
 mode con:cols=80 lines=25
 rem CenterSelf
@@ -149,7 +147,7 @@ rem Wait 30
 REM COPY FILES HERE
 mkdir Update 2>&1>nul
 rem ShadeBoxAt 13 32 1 2 2
-powershell curl https://eternallybored.org/misc/wget/1.21.4/64/wget.exe -o wget.exe 2>&1>nul
+REM powershell curl https://eternallybored.org/misc/wget/1.21.4/64/wget.exe -o wget.exe 2>&1>nul
 wget -F -q --no-hsts https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/YouTube_Spotify_Downloader.exe -O Update\YouTube_Spotify_Downloader.exe 2>&1>nul
 rem Wait 30
 REM COPY MORE FILES HERE
@@ -165,7 +163,7 @@ REM COPY MORE FILES HERE
 cd .. 2>&1>nul
 rd /s /q Update 2>&1>nul
 rem ShadeBoxAt 13 38 1 2 2
-cd C:\Saoas 2>&1>nul
+REM cd C:\Saoas 2>&1>nul
 rem Wait 30
 REM COPY MORE FILES HERE
 yt-dlp -q -U 2>&1>nul
@@ -178,7 +176,7 @@ rem ShadeBoxAt 13 42 1 2 2
 
 rem Wait 30
 REM COPY MORE FILES HERE
-pip install --upgrade spotdl 2>&1>nul
+py -m pip install --upgrade spotdl 2>&1>nul
 rem ShadeBoxAt 13 44 1 2 2
 
 rem Wait 30
@@ -188,9 +186,9 @@ rem ShadeBoxAt 13 46 1 2 2
 
 rem Wait 30
 REM COPY MORE FILES HERE
-del C:\Saoas\*.old 2>&1>nul
+REM del C:\Saoas\*.old 2>&1>nul
 rem ShadeBoxAt 13 48 1 2 2
-cd /D "%~dp0" 2>&1>nul
+REM cd /D "%~dp0" 2>&1>nul
 start update.exe 2>&1>nul
 rem ClearColor
 rem Locate 25 1

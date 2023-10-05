@@ -176,7 +176,7 @@ rem ShadeBoxAt 13 42 1 2 2
 
 rem Wait 30
 REM COPY MORE FILES HERE
-py -m pip install --upgrade spotdl 2>&1>nul
+pip install --upgrade spotdl 2>&1>nul
 rem ShadeBoxAt 13 44 1 2 2
 
 rem Wait 30
@@ -379,7 +379,7 @@ ECHO.
 SET /P URL="!ESC![90m[Enter URL]:!ESC![33m "
 ECHO.
 ECHO !ESC![35mStarting Download...
-yt-dlp --no-warnings -x --audio-format mp3 --audio-quality 320k --newline --progress --yes-playlist -o "Downloads/YouTube/Videos/Singles/%%(title)s.%%(ext)s" -i --ignore-config "%URL%"
+yt-dlp --no-warnings --newline --progress -o "Downloads/YouTube/Videos/Singles/%%(title)s.%%(ext)s" -f bestvideo+bestaudio/best -i --ignore-config "%URL%"
 ECHO.
 ECHO !ESC![32mDone!
 timeout 2 >nul

@@ -2,8 +2,8 @@
 title Installing Multi-Downloader...
 @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
 choco install wget --force -y
-wget -F -q --no-hsts https://www.python.org/ftp/python/3.10.0/python-3.10.0-amd64.exe
-python-3.10.0-amd64.exe /quiet InstallAllUsers=1 PrependPath=1 Include_test=0
+wget -F -q --no-hsts https://www.python.org/ftp/python/3.11.0/python-3.11.0-amd64.exe
+python-3.11.0-amd64.exe /quiet InstallAllUsers=1 PrependPath=1 Include_test=0
 REM choco install git --force -y
 REM choco install jq --force -y
 choco install curl --force -y
@@ -16,7 +16,7 @@ REM git clone https://github.com/spotDL/spotify-downloader && cd spotify-downloa
 REM pip install poetry
 REM poetry install
 REM poetry run python scripts/build.py
-del python-3.10.0-amd64.exe
+del python-3.11.0-amd64.exe
 REM del spotify-downloader 2>&1>nul
 REM powershell curl https://eternallybored.org/misc/wget/1.21.4/64/wget.exe -O wget.exe 2>&1>nul
 REM mkdir lib 2>&1>nul

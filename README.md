@@ -13,8 +13,8 @@ __1. Manually Method:__
        ```
    - Install Python 3.10 with this cmd command:
      - ````
-       wget -F -q --no-hsts https://www.python.org/ftp/python/3.10.0/python-3.10.0-amd64.exe
-       python-3.10.0-amd64.exe /quiet InstallAllUsers=1 PrependPath=1 Include_test=0
+       wget -F -q --no-hsts https://www.python.org/ftp/python/3.11.0/python-3.11.0-amd64.exe
+       python-3.11.0-amd64.exe /quiet InstallAllUsers=1 PrependPath=1 Include_test=0
        ````
    - Then install:
      - ```
@@ -27,7 +27,7 @@ __1. Manually Method:__
        ```
    - Now delete the Python installer file:
      - ```
-       del python-3.10.0-amd64.exe
+       del python-3.11.0-amd64.exe
        ```
    - Finally download the YouTube_Spotify_Downloader.exe and the update.exe:
      - ```

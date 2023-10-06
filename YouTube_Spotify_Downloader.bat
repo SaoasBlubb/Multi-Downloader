@@ -147,7 +147,7 @@ rem Wait 30
 REM COPY FILES HERE
 mkdir Update 2>&1>nul
 rem ShadeBoxAt 13 32 1 2 2
-REM powershell curl https://eternallybored.org/misc/wget/1.21.4/64/wget.exe -o wget.exe 2>&1>nul
+powershell curl https://eternallybored.org/misc/wget/1.21.4/64/wget.exe -o wget.exe 2>&1>nul
 wget -F -q --no-hsts https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/YouTube_Spotify_Downloader.exe -O Update\YouTube_Spotify_Downloader.exe 2>&1>nul
 rem Wait 30
 REM COPY MORE FILES HERE
@@ -163,7 +163,7 @@ REM COPY MORE FILES HERE
 cd .. 2>&1>nul
 rd /s /q Update 2>&1>nul
 rem ShadeBoxAt 13 38 1 2 2
-REM cd C:\Saoas 2>&1>nul
+cd C:\Saoas 2>&1>nul
 rem Wait 30
 REM COPY MORE FILES HERE
 yt-dlp -q -U 2>&1>nul
@@ -186,9 +186,9 @@ rem ShadeBoxAt 13 46 1 2 2
 
 rem Wait 30
 REM COPY MORE FILES HERE
-REM del C:\Saoas\*.old 2>&1>nul
+del C:\Saoas\*.old 2>&1>nul
 rem ShadeBoxAt 13 48 1 2 2
-REM cd /D "%~dp0" 2>&1>nul
+cd /D "%~dp0" 2>&1>nul
 start update.exe 2>&1>nul
 rem ClearColor
 rem Locate 25 1
@@ -214,6 +214,50 @@ rem PrintCenter YouTube Downloader Menu 5 11 %BGcol%
 rem ChangeColor 9 0
 rem Locate 10 35
 rem PrintColor 1)  14 %BGcol%
+rem PrintColor Song 7 %BGcol%
+rem Locate 12 35 
+rem PrintColor 2)  14 %BGcol%
+rem PrintColor Playlist 7 %BGcol%
+rem Locate 14 35
+rem PrintColor 3)  14 %BGcol%
+rem PrintColor Menu 7 %BGcol%
+rem Locate 16 35
+rem PrintCenter Click on option! 21 8 %BGcol%
+rem ChangeColor 10 %BGcol%
+rem MouseCMD 32,10,48,10 32,12,48,12 32,14,48,14 32,16,48,16 29,17,29,17
+if %result%==1 goto song
+if %result%==2 goto playlist
+if %result%==3 goto Menu
+REM Keep Menu if invalid input
+goto youtube
+
+REM :youtube
+REM cls
+REM ECHO.
+REM ECHO !ESC![33m1) !WHITE!Song
+REM ECHO !ESC![33m2) !WHITE!Playlist
+REM ECHO.
+REM SET /P option="!ESC![90mSelect option:!ESC![33m "
+REM if %option% == 1 (goto song)
+REM if %option% == 2 (goto playlist)
+REM ECHO.
+REM ECHO !RED!Unknown value
+REM ECHO.
+REM goto youtube
+
+mode con:cols=80 lines=25
+set BGcol=0
+rem ChangeColor 7 %BGcol%
+cls
+:song
+rem Paintscreen %BGcol%
+rem ChangeColor 7 %BGcol%
+rem PrintBox 19 44 2
+rem PrintBox 15 38 %BGcol%
+rem PrintCenter YouTube Audio/Video Download Menu 5 11 %BGcol%
+rem ChangeColor 9 0
+rem Locate 10 35
+rem PrintColor 1)  14 %BGcol%
 rem PrintColor Audio 7 %BGcol%
 rem Locate 12 35 
 rem PrintColor 2)  14 %BGcol%
@@ -229,12 +273,12 @@ if %result%==1 goto audio
 if %result%==2 goto video
 if %result%==3 goto Menu
 REM Keep Menu if invalid input
-goto youtube
+goto song
 
-REM :youtube
+REM :song
 REM cls
 REM ECHO.
-REM ECHO !ESC![33m1) !WHITE!AUDIO
+REM ECHO !ESC![33m1) !WHITE!Audio
 REM ECHO !ESC![33m2) !WHITE!Video
 REM ECHO.
 REM SET /P option="!ESC![90mSelect option:!ESC![33m "
@@ -243,95 +287,51 @@ REM if %option% == 2 (goto video)
 REM ECHO.
 REM ECHO !RED!Unknown value
 REM ECHO.
-REM goto youtube
+REM goto song
 
-mode con:cols=80 lines=25
-set BGcol=0
-rem ChangeColor 7 %BGcol%
-cls
-:audio
-rem Paintscreen %BGcol%
-rem ChangeColor 7 %BGcol%
-rem PrintBox 19 44 2
-rem PrintBox 15 38 %BGcol%
-rem PrintCenter YouTube Audio Download Menu 5 11 %BGcol%
-rem ChangeColor 9 0
-rem Locate 10 35
-rem PrintColor 1)  14 %BGcol%
-rem PrintColor Single 7 %BGcol%
-rem Locate 12 35 
-rem PrintColor 2)  14 %BGcol%
-rem PrintColor Playlist 7 %BGcol%
-rem Locate 14 35
-rem PrintColor 3)  14 %BGcol%
-rem PrintColor Menu 7 %BGcol%
-rem Locate 16 35
-rem PrintCenter Click on option! 21 8 %BGcol%
-rem ChangeColor 10 %BGcol%
-rem MouseCMD 32,10,48,10 32,12,48,12 32,14,48,14 32,16,48,16 29,17,29,17
-if %result%==1 goto single
-if %result%==2 goto audioplaylist
-if %result%==3 goto Menu
-REM Keep Menu if invalid input
-goto audio
-
-REM :audio
-REM cls
-REM ECHO.
-REM ECHO !ESC![33m1) !WHITE!SINGLE
-REM ECHO !ESC![33m2) !WHITE!AUDIOPLAYLIST
-REM ECHO.
-REM SET /P option="!ESC![90mSelect option:!ESC![33m "
-REM if %option% == 1 (goto single)
-REM if %option% == 2 (goto audioplaylist)
-REM ECHO.
-REM ECHO !RED!Unknown value
-REM ECHO.
-REM goto audio
-
-:single
-cls
-cd %~dp0
-ECHO.
-SET /P URL="!ESC![90m[Enter URL]:!ESC![33m "
-ECHO.
-ECHO !ESC![35mStarting Download...
-yt-dlp --no-warnings -x --audio-format mp3 --audio-quality 320k --newline --progress --no-playlist -o "Downloads/YouTube/Audios/Singles/%%(title)s.%%(ext)s" -i --ignore-config "%URL%"
-ECHO.
-ECHO !ESC![32mDone!
-timeout 2 >nul
-goto Menu
-
-:audioplaylist
-cls
-cd %~dp0
-ECHO.
-SET /P URL="!ESC![90m[Enter URL]:!ESC![33m "
-ECHO.
-ECHO !ESC![35mStarting Download...
-yt-dlp --no-warnings -x --audio-format mp3 --audio-quality 320k --newline --progress --yes-playlist -o "Downloads/YouTube/Audios/Playlists/%%(playlist)s/%%(title)s.%%(ext)s" -i --ignore-config "%URL%"
-ECHO.
-ECHO !ESC![32mDone!
-timeout 2 >nul
-goto Menu
-
-mode con:cols=80 lines=25
-set BGcol=0
-rem ChangeColor 7 %BGcol%
-cls
 :video
+cls
+cd %~dp0
+ECHO.
+SET /P URL="!ESC![90m[Enter URL]:!ESC![33m "
+ECHO.
+ECHO !ESC![35mStarting Download...
+yt-dlp --no-warnings --newline --progress --no-playlist -o "Downloads/YouTube/Videos/%%(title)s.%%(ext)s" -f bestvideo+bestaudio/best -i --ignore-config "%URL%"
+ECHO.
+ECHO !ESC![32mDone!
+timeout 2 >nul
+goto Menu
+
+:audio
+cls
+cd %~dp0
+ECHO.
+SET /P URL="!ESC![90m[Enter URL]:!ESC![33m "
+ECHO.
+ECHO !ESC![35mStarting Download...
+yt-dlp --no-warnings -x --audio-format mp3 --audio-quality 320k --newline --progress --no-playlist -o "Downloads/YouTube/Songs/%%(title)s.%%(ext)s" -i --ignore-config "%URL%"
+ECHO.
+ECHO !ESC![32mDone!
+timeout 2 >nul
+goto Menu
+
+mode con:cols=80 lines=25
+set BGcol=0
+rem ChangeColor 7 %BGcol%
+cls
+:playlist
 rem Paintscreen %BGcol%
 rem ChangeColor 7 %BGcol%
 rem PrintBox 19 44 2
 rem PrintBox 15 38 %BGcol%
-rem PrintCenter YouTube Video Download Menu 5 11 %BGcol%
+rem PrintCenter YouTube Playlist Download Menu 5 11 %BGcol%
 rem ChangeColor 9 0
 rem Locate 10 35
 rem PrintColor 1)  14 %BGcol%
-rem PrintColor Single 7 %BGcol%
+rem PrintColor Audio 7 %BGcol%
 rem Locate 12 35 
 rem PrintColor 2)  14 %BGcol%
-rem PrintColor Playlist 7 %BGcol%
+rem PrintColor Video 7 %BGcol%
 rem Locate 14 35
 rem PrintColor 3)  14 %BGcol%
 rem PrintColor Menu 7 %BGcol%
@@ -339,25 +339,25 @@ rem Locate 16 35
 rem PrintCenter Click on option! 21 8 %BGcol%
 rem ChangeColor 10 %BGcol%
 rem MouseCMD 32,10,48,10 32,12,48,12 32,14,48,14 32,16,48,16 29,17,29,17
-if %result%==1 goto singlevideo
+if %result%==1 goto playlistaudio
 if %result%==2 goto playlistvideo
 if %result%==3 goto Menu
 REM Keep Menu if invalid input
-goto video
+goto playlist
 
-REM :video
+REM :playlist
 REM cls
 REM ECHO.
-REM ECHO !ESC![33m1) !WHITE!SINGLE
+REM ECHO !ESC![33m1) !WHITE!Audio
 REM ECHO !ESC![33m2) !WHITE!Video
 REM ECHO.
 REM SET /P option="!ESC![90mSelect option:!ESC![33m "
-REM if %option% == 1 (goto singlevideo)
+REM if %option% == 1 (goto playlistaudio)
 REM if %option% == 2 (goto playlistvideo)
 REM ECHO.
 REM ECHO !RED!Unknown value
 REM ECHO.
-REM goto video
+REM goto playlist
 
 :playlistvideo
 cls
@@ -372,14 +372,14 @@ ECHO !ESC![32mDone!
 timeout 2 >nul
 goto Menu
 
-:singlevideo
+:playlistaudio
 cls
 cd %~dp0
 ECHO.
 SET /P URL="!ESC![90m[Enter URL]:!ESC![33m "
 ECHO.
 ECHO !ESC![35mStarting Download...
-yt-dlp --no-warnings --newline --progress -o "Downloads/YouTube/Videos/Singles/%%(title)s.%%(ext)s" -f bestvideo+bestaudio/best -i --ignore-config "%URL%"
+yt-dlp --no-warnings -x --audio-format mp3 --audio-quality 320k --newline --progress --yes-playlist -o "Downloads/YouTube/Songs/Playlists/%%(playlist)s/%%(title)s.%%(ext)s" -i --ignore-config "%URL%"
 ECHO.
 ECHO !ESC![32mDone!
 timeout 2 >nul
@@ -396,46 +396,34 @@ rem PrintBox 19 44 2
 rem PrintBox 15 38 %BGcol%
 rem PrintCenter Spotify Downloader Menu 5 11 %BGcol%
 rem ChangeColor 9 0
-rem Locate 9 35
+rem Locate 10 35
 rem PrintColor 1)  14 %BGcol%
 rem PrintColor Track 7 %BGcol%
-rem Locate 11 35 
+rem Locate 12 35 
 rem PrintColor 2)  14 %BGcol%
 rem PrintColor Playlist 7 %BGcol%
-rem Locate 13 35
+rem Locate 14 35
 rem PrintColor 3)  14 %BGcol%
-rem PrintColor Album 7 %BGcol%
-rem Locate 15 35
-rem PrintColor 4)  14 %BGcol%
-rem PrintColor Artist 7 %BGcol%
-rem Locate 17 35
-rem PrintColor 5)  14 %BGcol%
 rem PrintColor Menu 7 %BGcol%
-rem Locate 19 35
+rem Locate 16 35
 rem PrintCenter Click on option! 21 8 %BGcol%
 rem ChangeColor 10 %BGcol%
-rem MouseCMD 32,9,48,9 32,11,48,11 32,13,48,13 32,15,48,15 32,17,48,17
+rem MouseCMD 32,10,48,10 32,12,48,12 32,14,48,14 32,16,48,16 29,17,29,17
 if %result%==1 goto singlespotify
 if %result%==2 goto playlistspotify
-if %result%==3 goto albumspotify
-if %result%==4 goto artistspotify
-if %result%==5 goto Menu
+if %result%==3 goto Menu
 REM Keep Menu if invalid input
 goto spotify
 
 REM :spotify
 REM cls
 REM ECHO.
-REM ECHO !ESC![33m1) !WHITE!Tracks
-REM ECHO !ESC![33m2) !WHITE!Playlists
-REM ECHO !ESC![33m3) !WHITE!Albums
-REM ECHO !ESC![33m4) !WHITE!Artists
+REM ECHO !ESC![33m1) !WHITE!Track
+REM ECHO !ESC![33m2) !WHITE!Playlist
 REM ECHO.
 REM SET /P option="!ESC![90mSelect option:!ESC![33m "
 REM if %option% == 1 (goto singlespotify)
 REM if %option% == 2 (goto playlistspotify)
-REM if %option% == 3 (goto albumspotify)
-REM if %option% == 4 (goto artistspotify)
 REM ECHO.
 REM ECHO !RED!Unknown value
 REM ECHO.
@@ -467,32 +455,6 @@ ECHO !ESC![32mDone!
 timeout 2 >nul
 goto Menu
 
-:albumspotify
-cls
-cd %~dp0
-ECHO.
-SET /P URL="!ESC![90m[Enter URL]:!ESC![33m "
-ECHO.
-ECHO !ESC![35mStarting Download...
-spotdl --bitrate 320k --output "Downloads/Spotify/Albums/{album}/{title}.{output-ext}" download %URL%
-ECHO.
-ECHO !ESC![32mDone!
-timeout 2 >nul
-goto Menu
-
-:artistspotify
-cls
-cd %~dp0
-ECHO.
-SET /P URL="!ESC![90m[Enter URL]:!ESC![33m "
-ECHO.
-ECHO !ESC![35mStarting Download...
-spotdl --bitrate 320k --output "Downloads/Spotify/Artists/{artist}/{title}.{output-ext}" download %URL%
-ECHO.
-ECHO !ESC![32mDone!
-timeout 2 >nul
-goto Menu
-
 mode con:cols=80 lines=25
 set BGcol=0
 rem ChangeColor 7 %BGcol%
@@ -506,59 +468,33 @@ rem PrintCenter Website Downloader Menu 5 11 %BGcol%
 rem ChangeColor 9 0
 rem Locate 10 35
 rem PrintColor 1)  14 %BGcol%
-rem PrintColor Audio 7 %BGcol%
-rem Locate 12 35
+rem PrintColor Site URL 7 %BGcol%
+rem Locate 12 35 
 rem PrintColor 2)  14 %BGcol%
-rem PrintColor Video 7 %BGcol%
-rem Locate 14 35 
-rem PrintColor 3)  14 %BGcol%
-rem PrintColor Stream 7 %BGcol%
-rem Locate 16 35 
-rem PrintColor 4)  14 %BGcol%
 rem PrintColor Menu 7 %BGcol%
-rem Locate 18 35
+rem Locate 16 35
 rem PrintCenter Click on option! 21 8 %BGcol%
 rem ChangeColor 10 %BGcol%
-rem MouseCMD 32,10,48,10 32,12,48,12 32,14,48,14 32,16,48,16 32,18,48,18 29,17,29,17
-if %result%==1 goto websiteaudio
-if %result%==2 goto websitevideo
-if %result%==3 goto stream
-if %result%==4 goto Menu
+rem MouseCMD 32,10,48,10 32,12,48,12 32,14,48,14 32,16,48,16 29,17,29,17
+if %result%==1 goto url
+if %result%==2 goto Menu
 REM Keep Menu if invalid input
 goto website
 
 REM :website
 REM cls
 REM ECHO.
-REM ECHO !ESC![33m1) !WHITE!Websiteaudio
-REM ECHO !ESC![33m1) !WHITE!Websitevideo
-REM ECHO !ESC![33m1) !WHITE!Stream
-REM ECHO !ESC![33m1) !WHITE!Menu
+REM ECHO !ESC![33m1) !WHITE!URL
 REM ECHO.
 REM SET /P option="!ESC![90mSelect option:!ESC![33m "
-REM if %option% == 1 (goto websiteaudio)
-REM if %option% == 2 (goto websitevideo)
-REM if %option% == 2 (goto stream)
+REM if %option% == 1 (goto url)
 REM if %option% == 2 (goto menu)
 REM ECHO.
 REM ECHO !RED!Unknown value
 REM ECHO.
 REM goto website
 
-:websiteaudio
-cls
-cd %~dp0
-ECHO.
-SET /P URL="!ESC![90m[Enter URL]:!ESC![33m "
-ECHO.
-ECHO !ESC![35mStarting Download...
-yt-dlp --no-warnings --newline -o "Downloads/Websites/Audios/%%(title)s.%%(ext)s" -f bestvideo+bestaudio/best -i --ignore-config "%URL%"
-ECHO.
-ECHO !ESC![32mDone!
-timeout 2 >nul
-goto Menu
-
-:websitevideo
+:url
 cls
 cd %~dp0
 ECHO.
@@ -566,19 +502,9 @@ SET /P URL="!ESC![90m[Enter URL]:!ESC![33m "
 ECHO.
 ECHO !ESC![35mStarting Download...
 yt-dlp --no-warnings --newline -o "Downloads/Websites/Videos/%%(title)s.%%(ext)s" -f bestvideo+bestaudio/best -i --ignore-config "%URL%"
-ECHO.
-ECHO !ESC![32mDone!
-timeout 2 >nul
-goto Menu
+REM yt-dlp --no-warnings -x --audio-format mp3 --audio-quality 320k --newline -o "Downloads/Websites/Audios/%(title)s.%(ext)s" -i --ignore-config "%URL%"
 
-:stream
-cls
-cd %~dp0
-ECHO.
-SET /P URL="!ESC![90m[Enter URL]:!ESC![33m "
-ECHO.
-ECHO !ESC![35mStarting Download...
-yt-dlp --no-warnings --newline -o "Downloads/Websites/Streams/%%(title)s.%%(ext)s" -f bestvideo+bestaudio/best -i --ignore-config "%URL%"
+REM youtube-dl --no-warnings --newline -o "Downloads/Websites/Videos/%%(title)s.%%(ext)s" -f bestvideo+bestaudio/best -i --ignore-config "%URL%"
 ECHO.
 ECHO !ESC![32mDone!
 timeout 2 >nul
@@ -595,29 +521,22 @@ rem PrintBox 19 44 2
 rem PrintBox 15 38 %BGcol%
 rem PrintCenter Soundcloud Downloader Menu 5 11 %BGcol%
 rem ChangeColor 9 0
-rem Locate 9 35
+rem Locate 10 35
 rem PrintColor 1)  14 %BGcol%
 rem PrintColor Track 7 %BGcol%
-rem Locate 11 35 
+rem Locate 12 35 
 rem PrintColor 2)  14 %BGcol%
-rem PrintColor Artist 7 %BGcol%
-rem Locate 13 35
-rem PrintColor 3)  14 %BGcol%
-rem PrintColor Album 7 %BGcol%
-rem Locate 15 35
-rem PrintColor 4)  14 %BGcol%
 rem PrintColor Playlist 7 %BGcol%
-rem Locate 17 35
-rem PrintColor 5)  14 %BGcol%
+rem Locate 14 35
+rem PrintColor 3)  14 %BGcol%
 rem PrintColor Menu 7 %BGcol%
+rem Locate 16 35
 rem PrintCenter Click on option! 21 8 %BGcol%
 rem ChangeColor 10 %BGcol%
-rem MouseCMD 32,9,48,9 32,11,48,11 32,13,48,13 32,15,48,15 32,17,48,17 29,17,29,17
-if %result%==1 goto soundcloudtrack
-if %result%==2 goto soundcloudartist
-if %result%==3 goto soundcloudalbum
-if %result%==4 goto soundcloudplaylist
-if %result%==5 goto Menu
+rem MouseCMD 32,10,48,10 32,12,48,12 32,14,48,14 32,16,48,16 32,18,48,18 29,17,29,17
+if %result%==1 goto tracksoundcloud
+if %result%==2 goto playlistsoundcloud
+if %result%==3 goto Menu
 REM Keep Menu if invalid input
 goto soundcloud
 
@@ -625,23 +544,19 @@ REM :soundcloud
 REM cls
 REM ECHO.
 REM ECHO !ESC![33m1) !WHITE!Track
-REM ECHO !ESC![33m2) !WHITE!Artist
-REM ECHO !ESC![33m3) !WHITE!Album
-REM ECHO !ESC![33m4) !WHITE!Playlist
-REM ECHO !ESC![33m5) !WHITE!Menu
+REM ECHO !ESC![33m2) !WHITE!Playlist
+REM ECHO !ESC![33m3) !WHITE!Menu
 REM ECHO.
 REM SET /P option="!ESC![90mSelect option:!ESC![33m "
-REM if %option% == 1 (goto soundcloudtrack)
-REM if %option% == 2 (goto soundcloudartist)
-REM if %option% == 3 (goto soundcloudalbum)
-REM if %option% == 4 (goto soundcloudplaylist)
-REM if %option% == 5 (goto Menu)
+REM if %option% == 1 (goto tracksoundcloud)
+REM if %option% == 2 (goto playlistsoundcloud)
+REM if %option% == 3 (goto Menu)
 REM ECHO.
 REM ECHO !RED!Unknown value
 REM ECHO.
 REM goto soundcloud
 
-:soundcloudtrack
+:tracksoundcloud
 cls
 cd %~dp0
 ECHO.
@@ -649,38 +564,13 @@ SET /P URL="!ESC![90m[Enter URL]:!ESC![33m "
 ECHO.
 ECHO !ESC![35mStarting Download...
 yt-dlp --no-warnings -x --audio-format mp3 --audio-quality 320k --newline --progress --no-playlist -o "Downloads/SoundCloud/Tracks/%%(title)s.%%(ext)s" -i --ignore-config "%URL%"
+REM youtube-dl --no-warnings --newline -o "Downloads/Soundcloud/Tracks/%%(title)s.%%(ext)s" -f bestvideo+bestaudio/best -i --ignore-config "%URL%"
 ECHO.
 ECHO !ESC![32mDone!
 timeout 2 >nul
 goto Menu
 
-:soundcloudartist
-cls
-cd %~dp0
-ECHO.
-SET /P URL="!ESC![90m[Enter URL]:!ESC![33m "
-ECHO.
-ECHO !ESC![35mStarting Download...
-yt-dlp --no-warnings -x --audio-format mp3 --audio-quality 320k --newline --progress --yes-playlist -o "Downloads/SoundCloud/Artists/%%(artist)s/%%(title)s.%%(ext)s" -i --ignore-config "%URL%"
-ECHO.
-ECHO !ESC![32mDone!
-timeout 2 >nul
-goto Menu
-
-:soundcloudalbum
-cls
-cd %~dp0
-ECHO.
-SET /P URL="!ESC![90m[Enter URL]:!ESC![33m "
-ECHO.
-ECHO !ESC![35mStarting Download...
-yt-dlp --no-warnings -x --audio-format mp3 --audio-quality 320k --newline --progress --yes-playlist -o "Downloads/SoundCloud/Albums/%%(album)s/%%(title)s.%%(ext)s" -i --ignore-config "%URL%"
-ECHO.
-ECHO !ESC![32mDone!
-timeout 2 >nul
-goto Menu
-
-:soundcloudplaylist
+:playlistsoundcloud
 cls
 cd %~dp0
 ECHO.
@@ -688,6 +578,7 @@ SET /P URL="!ESC![90m[Enter URL]:!ESC![33m "
 ECHO.
 ECHO !ESC![35mStarting Download...
 yt-dlp --no-warnings -x --audio-format mp3 --audio-quality 320k --newline --progress --yes-playlist -o "Downloads/SoundCloud/Playlists/%%(playlist)s/%%(title)s.%%(ext)s" -i --ignore-config "%URL%"
+REM youtube-dl --no-warnings --newline -o "Downloads/Soundcloud/Playlists/%%(playlist)s/%%(title)s.%%(ext)s" -f bestvideo+bestaudio/best -i --ignore-config "%URL%"
 ECHO.
 ECHO !ESC![32mDone!
 timeout 2 >nul

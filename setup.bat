@@ -1,4 +1,5 @@
 @echo off
+title Setting Up Variable Paths...
 mkdir "C:\Saoas" 2>&1>nul
 copy "lib\*.exe" "C:\Saoas" 2>&1>nul
 cd "C:\Saoas" 2>&1>nul

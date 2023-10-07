@@ -23,6 +23,7 @@ rd /S /q ffmpeg-master-latest-win64-gpl
 mkdir C:\Saoas
 move * C:\Saoas
 cd ..
+rd /S /q lib
 REM spotdl --download-ffmpeg --force
 setup.bat
 exit

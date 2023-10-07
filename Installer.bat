@@ -16,6 +16,7 @@ call cmd.exe /C pip install yt-dlp
 wget -F -q --no-hsts https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip -O ffmpeg-master-latest-win64-gpl.zip
 tar -xf ffmpeg-master-latest-win64-gpl.zip
 del /S /q ffmpeg-master-latest-win64-gpl.zip
+del /S /q python-3.11.0-amd64.exe
 cd ffmpeg-master-latest-win64-gpl\bin
 xcopy * ..\.. /s /e /Y
 cd ..\..

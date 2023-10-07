@@ -142,7 +142,7 @@ rem ChangeColor %FGcol% 0
 rem PrintCenter Updating... 11 12 %BGcol%
 rem PrintBoxAt 12 31 3 20 2
 rem ChangeColor 0 %FGcol%
-
+cd /D %~dp0
 rem Wait 30
 REM COPY FILES HERE
 mkdir Update 2>&1>nul

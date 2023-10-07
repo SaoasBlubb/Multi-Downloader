@@ -188,8 +188,8 @@ rem Wait 30
 REM COPY MORE FILES HERE
 del C:\Saoas\*.old 2>&1>nul
 rem ShadeBoxAt 13 48 1 2 2
-cd /D "%~dp0" 2>&1>nul
-start update.bat 2>&1>nul
+cd /D %~dp0 2>&1>nul
+update.bat 2>&1>nul
 rem ClearColor
 rem Locate 25 1
 

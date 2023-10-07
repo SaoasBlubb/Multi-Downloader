@@ -37,8 +37,7 @@ __1. Manually Method:__
 
 __2. Auto Method:__ 
   > *Anti Virus says Positive cuz it downloads and Installs into System Path, like the Manual Method*
-   - Just Download and Execute Installer.exe:
-     [Installer.exe](https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/Installer.exe)
+   - Just Download and Execute Installer.exe!
 
 ### In Action
 - __Main Menu and Update!__

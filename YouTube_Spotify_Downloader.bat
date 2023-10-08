@@ -163,7 +163,7 @@ REM COPY MORE FILES HERE
 cd .. 2>&1>nul
 rd /s /q Update 2>&1>nul
 rem ShadeBoxAt 13 38 1 2 2
-cd C:\Saoas 2>&1>nul
+REM cd C:\Saoas 2>&1>nul
 rem Wait 30
 REM COPY MORE FILES HERE
 yt-dlp -q -U 2>&1>nul
@@ -186,9 +186,9 @@ rem ShadeBoxAt 13 46 1 2 2
 
 rem Wait 30
 REM COPY MORE FILES HERE
-del C:\Saoas\*.old 2>&1>nul
+REM del C:\Saoas\*.old 2>&1>nul
 rem ShadeBoxAt 13 48 1 2 2
-cd %~dp0 2>&1>nul
+REM cd %~dp0 2>&1>nul
 update.bat 2>&1>nul
 rem ClearColor
 rem Locate 25 1

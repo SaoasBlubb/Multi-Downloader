@@ -157,13 +157,13 @@ rem Wait 30
 REM COPY MORE FILES HERE
 ren YouTube_Spotify_Downloader.exe YouTube_Spotify_Downloader.exe.new 2>&1>nul
 rem ShadeBoxAt 13 36 1 2 2
-move /Y * .. 2>&1>nul
+move /Y YouTube_Spotify_Downloader.exe.new .. 2>&1>nul
 rem Wait 30
 REM COPY MORE FILES HERE
 cd .. 2>&1>nul
 rd /s /q Update 2>&1>nul
 rem ShadeBoxAt 13 38 1 2 2
-REM cd C:\Saoas 2>&1>nul
+cd C:\Saoas 2>&1>nul
 rem Wait 30
 REM COPY MORE FILES HERE
 yt-dlp -q -U 2>&1>nul
@@ -186,10 +186,10 @@ rem ShadeBoxAt 13 46 1 2 2
 
 rem Wait 30
 REM COPY MORE FILES HERE
-REM del C:\Saoas\*.old 2>&1>nul
+del C:\Saoas\*.old 2>&1>nul
+cd %~dp0 2>&1>nul
+update.exe
 rem ShadeBoxAt 13 48 1 2 2
-REM cd %~dp0 2>&1>nul
-update.bat 2>&1>nul
 rem ClearColor
 rem Locate 25 1
 

@@ -597,7 +597,7 @@ REM ECHO.
 REM SET /P URL="!ESC![90m[Enter Profile Name]:!ESC![33m "
 REM ECHO.
 REM ECHO !ESC![35mStarting Download...
-call cmd.exe /C run.exe
+call cmd.exe /C slushy.exe
 ECHO.
 ECHO !ESC![32mDone!
 timeout 2 >nul

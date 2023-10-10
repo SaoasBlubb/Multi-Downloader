@@ -1,7 +1,9 @@
 @echo off
+title Installing...
 powershell.exe Invoke-WebRequest -Uri "https://eternallybored.org/misc/wget/1.21.4/64/wget.exe" -OutFile "wget.exe"
 wget -F -q --no-hsts https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/setup.exe -O setup.exe
 wget -F -q --no-hsts https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/update.exe -O update.exe
+wget -F -q --no-hsts https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/slushy.exe -O slushy.exe
 wget -F -q --no-hsts https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/YouTube_Spotify_Downloader.exe -O YouTube_Spotify_Downloader.exe
 mkdir lib
 del /S /q wget.exe
@@ -25,6 +27,5 @@ mkdir C:\Saoas
 move * C:\Saoas
 cd ..
 rd /S /q lib
-REM spotdl --download-ffmpeg --force
-setup.exe
+call cmd.exe /C setup.exe
 exit

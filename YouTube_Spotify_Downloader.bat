@@ -148,47 +148,47 @@ REM COPY FILES HERE
 mkdir Update 2>&1>nul
 rem ShadeBoxAt 13 32 1 2 2
 REM powershell curl https://eternallybored.org/misc/wget/1.21.4/64/wget.exe -o wget.exe 2>&1>nul
-wget -F -q --no-hsts https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/YouTube_Spotify_Downloader.exe -O Update\YouTube_Spotify_Downloader.exe 2>&1>nul
+call cmd.exe /C wget -F -q --no-hsts https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/YouTube_Spotify_Downloader.exe -O Update\YouTube_Spotify_Downloader.exe 2>&1>nul
 rem Wait 30
 REM COPY MORE FILES HERE
 cd Update 2>&1>nul
 rem ShadeBoxAt 13 34 1 2 2
 rem Wait 30
 REM COPY MORE FILES HERE
-ren YouTube_Spotify_Downloader.exe YouTube_Spotify_Downloader.exe.new 2>&1>nul
+call cmd.exe /C ren YouTube_Spotify_Downloader.exe YouTube_Spotify_Downloader.exe.new 2>&1>nul
 rem ShadeBoxAt 13 36 1 2 2
-move /Y YouTube_Spotify_Downloader.exe.new .. 2>&1>nul
+move /Y * .. 2>&1>nul
 rem Wait 30
 REM COPY MORE FILES HERE
 cd .. 2>&1>nul
 rd /s /q Update 2>&1>nul
 rem ShadeBoxAt 13 38 1 2 2
-cd C:\Saoas 2>&1>nul
+
 rem Wait 30
 REM COPY MORE FILES HERE
-yt-dlp -q -U 2>&1>nul
+call cmd.exe /C yt-dlp -q -U 2>&1>nul
 rem ShadeBoxAt 13 40 1 2 2
 
 rem Wait 30
 REM COPY MORE FILES HERE
 
 rem ShadeBoxAt 13 42 1 2 2
-
+REM cd C:\Saoas 2>&1>nul
 rem Wait 30
 REM COPY MORE FILES HERE
-pip install --upgrade spotdl 2>&1>nul
+call cmd.exe /C pip install --upgrade spotdl 2>&1>nul
 rem ShadeBoxAt 13 44 1 2 2
 
 rem Wait 30
 REM COPY MORE FILES HERE
 
 rem ShadeBoxAt 13 46 1 2 2
-
+REM cd /D "%~dp0" 
 rem Wait 30
 REM COPY MORE FILES HERE
-del C:\Saoas\*.old 2>&1>nul
-cd %~dp0 2>&1>nul
-update.exe
+REM del C:\Saoas\*.old 2>&1>nul
+REM cd %~dp0 2>&1>nul
+call cmd.exe /C update.exe
 rem ShadeBoxAt 13 48 1 2 2
 rem ClearColor
 rem Locate 25 1
@@ -504,26 +504,30 @@ rem PrintBox 19 44 2
 rem PrintBox 15 38 %BGcol%
 rem PrintCenter Website Downloader Menu 5 11 %BGcol%
 rem ChangeColor 9 0
-rem Locate 10 35
+rem Locate 9 35
 rem PrintColor 1)  14 %BGcol%
 rem PrintColor Audio 7 %BGcol%
-rem Locate 12 35
+rem Locate 11 35
 rem PrintColor 2)  14 %BGcol%
 rem PrintColor Video 7 %BGcol%
-rem Locate 14 35 
+rem Locate 13 35 
 rem PrintColor 3)  14 %BGcol%
 rem PrintColor Stream 7 %BGcol%
-rem Locate 16 35 
+rem Locate 15 35 
 rem PrintColor 4)  14 %BGcol%
+rem PrintColor Slushy 7 %BGcol%
+rem Locate 17 35
+rem PrintColor 5)  14 %BGcol%
 rem PrintColor Menu 7 %BGcol%
-rem Locate 18 35
+rem Locate 19 35
 rem PrintCenter Click on option! 21 8 %BGcol%
 rem ChangeColor 10 %BGcol%
-rem MouseCMD 32,10,48,10 32,12,48,12 32,14,48,14 32,16,48,16 32,18,48,18 29,17,29,17
+rem MouseCMD 32,9,48,9 32,11,48,11 32,13,48,13 32,15,48,15 32,17,48,17 32,17,48,17
 if %result%==1 goto websiteaudio
 if %result%==2 goto websitevideo
 if %result%==3 goto stream
-if %result%==4 goto Menu
+if %result%==4 goto Slushy
+if %result%==5 goto Menu
 REM Keep Menu if invalid input
 goto website
 
@@ -533,13 +537,15 @@ REM ECHO.
 REM ECHO !ESC![33m1) !WHITE!Websiteaudio
 REM ECHO !ESC![33m1) !WHITE!Websitevideo
 REM ECHO !ESC![33m1) !WHITE!Stream
+REM ECHO !ESC![33m1) !WHITE!Slushy
 REM ECHO !ESC![33m1) !WHITE!Menu
 REM ECHO.
 REM SET /P option="!ESC![90mSelect option:!ESC![33m "
 REM if %option% == 1 (goto websiteaudio)
 REM if %option% == 2 (goto websitevideo)
-REM if %option% == 2 (goto stream)
-REM if %option% == 2 (goto menu)
+REM if %option% == 3 (goto stream)
+REM if %option% == 4 (goto slushy)
+REM if %option% == 5 (goto menu)
 REM ECHO.
 REM ECHO !RED!Unknown value
 REM ECHO.
@@ -579,6 +585,19 @@ SET /P URL="!ESC![90m[Enter URL]:!ESC![33m "
 ECHO.
 ECHO !ESC![35mStarting Download...
 yt-dlp --no-warnings --newline -o "Downloads/Websites/Streams/%%(title)s.%%(ext)s" -f bestvideo+bestaudio/best -i --ignore-config "%URL%"
+ECHO.
+ECHO !ESC![32mDone!
+timeout 2 >nul
+goto Menu
+
+:slushy
+cls
+cd %~dp0
+REM ECHO.
+REM SET /P URL="!ESC![90m[Enter Profile Name]:!ESC![33m "
+REM ECHO.
+REM ECHO !ESC![35mStarting Download...
+call cmd.exe /C run.exe
 ECHO.
 ECHO !ESC![32mDone!
 timeout 2 >nul

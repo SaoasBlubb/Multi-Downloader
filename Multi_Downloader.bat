@@ -172,7 +172,7 @@ rem Wait 30
 REM COPY MORE FILES HERE
 
 rem ShadeBoxAt 13 42 1 2 2
-cd C:\Saoas 2>&1>nul
+REM cd C:\Saoas 2>&1>nul
 rem Wait 30
 REM COPY MORE FILES HERE
 pip install --upgrade spotdl 2>&1>nul
@@ -182,10 +182,10 @@ rem Wait 30
 REM COPY MORE FILES HERE
 
 rem ShadeBoxAt 13 46 1 2 2
-cd /D "%~dp0" 
+REM cd /D "%~dp0" 
 rem Wait 30
 REM COPY MORE FILES HERE
-del C:\Saoas\*.old 2>&1>nul
+REM del C:\Saoas\*.old 2>&1>nul
 REM cd %~dp0 2>&1>nul
 update.exe 2>&1>nul
 rem ShadeBoxAt 13 48 1 2 2

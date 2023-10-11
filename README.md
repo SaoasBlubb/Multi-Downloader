@@ -54,21 +54,27 @@ __2. Auto Method:__
   ![YouTube Audio Menu](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/8d81457f-7560-4195-8f4a-3529438a5b21)
 
   ![YouTube Video Menu](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/426c9fa3-a8eb-4968-a1af-2463ec0f431b)
+  - __YouTube Download!__
   
   ![YouTube Audio Playlist Download](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/b8835d8c-d5fd-408f-a739-a05f8a6040a9)
 #
 - __Spotify Menu!__
 
   ![Spotify Main](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/f21b3341-45b8-4ec6-a493-345bd34ff7e8)
-
+  - __Spotify Download!__
+  
   ![Spotify Artist Download](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/25e20721-9cc0-4ec9-8af3-f9d5fdcfff8d)
 #
 - __SoundCloud Menu!__
 
   ![SoundCloud Main](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/3b6abaf8-d4ff-4bcb-ace5-0b159b052fa6)
-
+  - __SoundCloud Download!__
+ 
   ![SoundCloud Playlist Download](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/81e4a2bf-0885-4de6-9fe5-07c5bdc00dd9)
 #
 - __Website Menu!__
 
   ![Website Main](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/a80ea59c-b0b1-4a5a-9bf1-cc0822fe79ec)
+  - __Slushy Download!__
+  
+  ![Slushy](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/3854ea87-cdd8-478e-9bc7-96e59f21a976)

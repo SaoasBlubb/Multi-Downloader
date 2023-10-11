@@ -8,7 +8,7 @@ from util.driver import Driver
 
 # Variable 
 console = Console()
-username = input("Profilename?: ")
+username = input("[Enter Profile Name]: ")
 print("")
 user_agent = ""
 auth = ""

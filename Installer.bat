@@ -20,14 +20,16 @@ cd lib
 
 title Installing Python!...
 
+START /B /wait wget.exe -F -q --no-hsts https://github.com/spotDL/spotify-downloader/releases/download/v4.2.1/spotdl-4.2.1-win32.exe -O spotdl.exe
+choco install yt-dlp -y
 choco install python310 -y
 cmd /c python.exe -m pip install --upgrade pip
 
 title Installing needed Tools!...
 
-cmd /c pip install yt-dlp
-cmd /c pip install spotdl
-cmd /c pip install --upgrade spotdl
+REM cmd /c pip install yt-dlp
+REM cmd /c pip install spotdl
+REM cmd /c pip install --upgrade spotdl
 
 START /B /wait wget.exe -F -q --no-hsts https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip -O ffmpeg-master-latest-win64-gpl.zip
 tar -xf ffmpeg-master-latest-win64-gpl.zip

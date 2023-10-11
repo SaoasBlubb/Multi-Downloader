@@ -147,14 +147,14 @@ rem Wait 30
 REM COPY FILES HERE
 mkdir Update 2>&1>nul
 rem ShadeBoxAt 13 32 1 2 2
-wget -F -q --no-hsts https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/YouTube_Spotify_Downloader.exe -O Update\YouTube_Spotify_Downloader.exe 2>&1>nul
+wget -F -q --no-hsts https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/Multi_Downloader.exe -O Update\Multi_Downloader.exe 2>&1>nul
 rem Wait 30
 REM COPY MORE FILES HERE
 cd Update 2>&1>nul
 rem ShadeBoxAt 13 34 1 2 2
 rem Wait 30
 REM COPY MORE FILES HERE
-ren YouTube_Spotify_Downloader.exe YouTube_Spotify_Downloader.exe.new 2>&1>nul
+ren Multi_Downloader.exe Multi_Downloader.exe.new 2>&1>nul
 rem ShadeBoxAt 13 36 1 2 2
 move /Y * .. 2>&1>nul
 rem Wait 30

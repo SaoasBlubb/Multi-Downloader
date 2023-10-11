@@ -175,7 +175,7 @@ rem ShadeBoxAt 13 42 1 2 2
 REM cd C:\Saoas 2>&1>nul
 rem Wait 30
 REM COPY MORE FILES HERE
-pip install --upgrade spotdl 2>&1>nul
+REM pip install --upgrade spotdl 2>&1>nul
 rem ShadeBoxAt 13 44 1 2 2
 
 rem Wait 30

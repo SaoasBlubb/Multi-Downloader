@@ -21,10 +21,12 @@ cd lib
 
 title Installing Python!...
 
-wget -F -q --no-hsts https://github.com/spotDL/spotify-downloader/releases/download/v4.2.1/spotdl-4.2.1-win32.exe -O spotdl.exe
-choco install yt-dlp -y
+REM wget -F -q --no-hsts https://github.com/spotDL/spotify-downloader/releases/download/v4.2.1/spotdl-4.2.1-win32.exe -O spotdl.exe
+REM choco install yt-dlp -y
 choco install python311 -y
 pip install --upgrade pip
+pip install yt-dlp
+pip install spotdl -y
 
 title Installing needed Tools!...
 

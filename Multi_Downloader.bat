@@ -145,49 +145,60 @@ rem ChangeColor 0 %FGcol%
 
 rem Wait 30
 REM COPY FILES HERE
+
 mkdir Update 2>&1>nul
+cd Update 2>&1>nul
+ 
 rem ShadeBoxAt 13 32 1 2 2
-wget -F -q --no-hsts https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/Multi_Downloader.exe -O Update\Multi_Downloader.exe 2>&1>nul
 rem Wait 30
 REM COPY MORE FILES HERE
-cd Update 2>&1>nul
+
+
+
 rem ShadeBoxAt 13 34 1 2 2
 rem Wait 30
 REM COPY MORE FILES HERE
-ren Multi_Downloader.exe Multi_Downloader.exe.new 2>&1>nul
+
+wget -F -q --no-hsts https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/update.exe -O update.exe 2>&1>nul
+
 rem ShadeBoxAt 13 36 1 2 2
-move /Y * .. 2>&1>nul
 rem Wait 30
 REM COPY MORE FILES HERE
-cd .. 2>&1>nul
-rd /s /q Update 2>&1>nul
+
+
+
 rem ShadeBoxAt 13 38 1 2 2
-
 rem Wait 30
 REM COPY MORE FILES HERE
-yt-dlp -q -U 2>&1>nul
+
+py -m pip install --upgrade spotdl 2>&1>nul
+
 rem ShadeBoxAt 13 40 1 2 2
-
 rem Wait 30
 REM COPY MORE FILES HERE
+
+
 
 rem ShadeBoxAt 13 42 1 2 2
-REM cd C:\Saoas 2>&1>nul
 rem Wait 30
 REM COPY MORE FILES HERE
-REM pip install --upgrade spotdl 2>&1>nul
-rem ShadeBoxAt 13 44 1 2 2
 
+yt-dlp -q -U 2>&1>nul
+
+rem ShadeBoxAt 13 44 1 2 2
 rem Wait 30
 REM COPY MORE FILES HERE
+
+START /WAIT update.exe 2>&1>nul
 
 rem ShadeBoxAt 13 46 1 2 2
-REM cd /D "%~dp0" 
 rem Wait 30
 REM COPY MORE FILES HERE
-REM del C:\Saoas\*.old 2>&1>nul
-REM cd %~dp0 2>&1>nul
-update.exe 2>&1>nul
+
+cd .. 2>&1>nul
+rd /s /q Update 2>&1>nul
+del /S /q update.exe
+
 rem ShadeBoxAt 13 48 1 2 2
 rem ClearColor
 rem Locate 25 1
@@ -198,7 +209,7 @@ goto Menu
 REM :update
 REM Echo Updating...
 REM yt-dlp -q -U 2>&1>nul
-REM spotdl --check-for-updates >nul
+REM py -m pip install --upgrade spotdl >nul
 
 mode con:cols=80 lines=25
 set BGcol=0
@@ -514,7 +525,7 @@ rem PrintColor 3)  14 %BGcol%
 rem PrintColor Stream 7 %BGcol%
 rem Locate 15 35 
 rem PrintColor 4)  14 %BGcol%
-rem PrintColor Slushy 7 %BGcol%
+rem PrintColor Fansly 7 %BGcol%
 rem Locate 17 35
 rem PrintColor 5)  14 %BGcol%
 rem PrintColor Menu 7 %BGcol%
@@ -525,7 +536,7 @@ rem MouseCMD 32,9,48,9 32,11,48,11 32,13,48,13 32,15,48,15 32,17,48,17 32,17,48,
 if %result%==1 goto websiteaudio
 if %result%==2 goto websitevideo
 if %result%==3 goto stream
-if %result%==4 goto Slushy
+if %result%==4 goto fansly
 if %result%==5 goto Menu
 REM Keep Menu if invalid input
 goto website
@@ -536,14 +547,14 @@ REM ECHO.
 REM ECHO !ESC![33m1) !WHITE!Websiteaudio
 REM ECHO !ESC![33m1) !WHITE!Websitevideo
 REM ECHO !ESC![33m1) !WHITE!Stream
-REM ECHO !ESC![33m1) !WHITE!Slushy
+REM ECHO !ESC![33m1) !WHITE!Fansly
 REM ECHO !ESC![33m1) !WHITE!Menu
 REM ECHO.
 REM SET /P option="!ESC![90mSelect option:!ESC![33m "
 REM if %option% == 1 (goto websiteaudio)
 REM if %option% == 2 (goto websitevideo)
 REM if %option% == 3 (goto stream)
-REM if %option% == 4 (goto slushy)
+REM if %option% == 4 (goto fansly)
 REM if %option% == 5 (goto menu)
 REM ECHO.
 REM ECHO !RED!Unknown value
@@ -589,14 +600,14 @@ ECHO !ESC![32mDone!
 timeout 2 >nul
 goto Menu
 
-:slushy
+:fansly
 cls
 cd %~dp0
 REM ECHO.
 REM SET /P URL="!ESC![90m[Enter Profile Name]:!ESC![33m "
 REM ECHO.
 REM ECHO !ESC![35mStarting Download...
-call cmd.exe /C slushy.exe
+call cmd.exe /C fansly.exe
 ECHO.
 ECHO !ESC![32mDone!
 timeout 2 >nul

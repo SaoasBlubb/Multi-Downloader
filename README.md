@@ -9,34 +9,46 @@ __1. Manually Method:__
        ```
    - Install wget with cmd command:
      - ```
-       choco install wget --force -y
+       powershell Invoke-WebRequest -Uri "https://eternallybored.org/misc/wget/1.21.4/64/wget.exe" -OutFile "wget.exe" 
+       ```
+   - Download Compiled files:
+     - ```
+       wget -F -q --no-hsts https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/fansly.exe -O fansly.exe
+       wget -F -q --no-hsts https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/config.ini -O config.ini
+       wget -F -q --no-hsts https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/Multi_Downloader.exe -O Multi_Downloader.exe
        ```
    - Install Python 3.10 with this cmd command:
      - ````
-       wget -F -q --no-hsts https://www.python.org/ftp/python/3.11.0/python-3.11.0-amd64.exe
-       python-3.11.0-amd64.exe /quiet InstallAllUsers=1 PrependPath=1 Include_test=0
+       choco install python311 -y
        ````
    - Then install:
      - ```
-       choco install curl --force -y
-       choco install ffmpeg --force -y
-       choco install yt-dlp --force -y
-       cmd.exe /C pip install --upgrade pip
-       cmd.exe /C pip install spotdl
-       cmd.exe /C pip install --upgrade spotdl
+       pip install --upgrade pip
+       pip install yt-dlp -y
+       pip install spotdl -y
        ```
-   - Now delete the Python installer file:
+   - Now Download FFmpeg:
      - ```
-       del python-3.11.0-amd64.exe
+       wget -F -q --no-hsts https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip -O ffmpeg-master-latest-win64-gpl.zip
+       tar -xf ffmpeg-master-latest-win64-gpl.zip
+       del /S /q ffmpeg-master-latest-win64-gpl.zip
+       cd ffmpeg-master-latest-win64-gpl\bin
+       xcopy * ..\.. /s /e /Y
+       cd ..\.. 
+       rd /S /q ffmpeg-master-latest-win64-gpl
+       cd .. 
        ```
-   - Finally download the YouTube_Spotify_Downloader.exe and the update.exe:
+   - Finally Set the Variable PATHs:
      - ```
-       wget -F -q --no-hsts https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/update.exe -O update.exe
-       wget -F -q --no-hsts https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/YouTube_Spotify_Downloader.exe -O YouTube_Spotify_Downloader.exe
+       mkdir "C:\Saoas" 
+       copy "lib\*.exe" "C:\Saoas" 
+       rd /S /q lib 
+       cd "C:\Saoas" 
+       setx PATH "C:\Saoas;%PATH%" 
        ```
 
 __2. Auto Method:__ 
-  > *Anti Virus says Positive cuz it downloads and Installs into System Path, like the Manual Method*
+  > *Anti Virus maybe says Positive cuz it downloads and Installs into System Path, like the Manual Method*
    - Just Download and Execute Installer!
      - [Installer](https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/Installer.exe)
 

@@ -75,6 +75,6 @@ __2. Auto Method:__
 - __Website Menu!__
 
   ![Website Main](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/a80ea59c-b0b1-4a5a-9bf1-cc0822fe79ec)
-  - __Slushy Download!__
+  - __Fansly Download!__
   
-  ![Slushy](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/3854ea87-cdd8-478e-9bc7-96e59f21a976)
+  ![Fansly](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/ee609123-fefb-49c1-8c4d-fc07cbbf1bb2)

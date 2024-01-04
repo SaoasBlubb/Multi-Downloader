@@ -26,6 +26,11 @@ powershell -Command Add-MpPreference -ExclusionProcess "update.exe" -Force
 powershell -Command Add-MpPreference -ExclusionProcess "MD_KILL.exe" -Force
 
 mkdir "%USERPROFILE%/Desktop/Saoas_Tools/Multi_Downloader"
+move config.ini "%USERPROFILE%/Desktop/Saoas_Tools/Multi_Downloader"
+move fansly.exe "%USERPROFILE%/Desktop/Saoas_Tools/Multi_Downloader"
+move Multi_Downloader.exe "%USERPROFILE%/Desktop/Saoas_Tools/Multi_Downloader"
+move path.ps1 "%USERPROFILE%/Desktop/Saoas_Tools/Multi_Downloader"
+
 cd "%USERPROFILE%/Desktop/Saoas_Tools/Multi_Downloader"
 
 title Downloading Files!...
@@ -36,8 +41,9 @@ REM ren config.txt config.ini
 REM wget -q --show-progress --user-agent="chrome" --no-hsts https://files.saoas.tv/Multi_Downloader/Multi_Downloader.exe -O Multi_Downloader.exe
 
 mkdir lib
-copy wget.exe lib
 cd lib
+powershell Invoke-WebRequest -Uri "https://eternallybored.org/misc/wget/1.21.4/64/wget.exe" -OutFile "wget.exe" 
+
 
 title Installing needed Tools!...
 
@@ -65,9 +71,8 @@ REM ren path.txt path.ps1
 REM cmd /c ren "C:\Users\Saoas\Desktop\Saoas_Tools\Multi_Downloader\path.txt" path.ps1
 cd %USERPROFILE%/Desktop/Saoas_Tools/Multi_Downloader/
 
-echo A | powershell.exe Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-powershell.exe -File "%USERPROFILE%/Desktop/Saoas_Tools/Multi_Downloader/path.ps1" -noexit
-REM cmd /c powershell "%USERPROFILE%/Desktop/Saoas_Tools/Multi_Downloader/path.ps1"
+echo A | powershell.exe  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+cmd /c powershell "%USERPROFILE%/Desktop/Saoas_Tools/Multi_Downloader/path.ps1"
 
 del /S /q "%USERPROFILE%/Desktop/Saoas_Tools/Multi_Downloader/path.ps1"
 del /S /q "%USERPROFILE%/Desktop/Saoas_Tools/Multi_Downloader/wget.exe"

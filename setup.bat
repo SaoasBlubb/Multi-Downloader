@@ -66,7 +66,8 @@ REM cmd /c ren "C:\Users\Saoas\Desktop\Saoas_Tools\Multi_Downloader\path.txt" pa
 cd %USERPROFILE%/Desktop/Saoas_Tools/Multi_Downloader/
 
 echo A | powershell.exe Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-cmd /c powershell "%USERPROFILE%/Desktop/Saoas_Tools/Multi_Downloader/path.ps1"
+powershell.exe -File "%USERPROFILE%/Desktop/Saoas_Tools/Multi_Downloader/path.ps1" -noexit
+REM cmd /c powershell "%USERPROFILE%/Desktop/Saoas_Tools/Multi_Downloader/path.ps1"
 
 del /S /q "%USERPROFILE%/Desktop/Saoas_Tools/Multi_Downloader/path.ps1"
 del /S /q "%USERPROFILE%/Desktop/Saoas_Tools/Multi_Downloader/wget.exe"

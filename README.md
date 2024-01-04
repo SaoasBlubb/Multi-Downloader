@@ -1,53 +1,8 @@
 # Multi Downloader
 - A Downloader Tool for Downloading Songs, Videos, Playlists from Spotify, YouTube, Soundcloud, Twitch and any other Website!
 
-## Requirements
-__1. Manually Method:__
-   - Install chocolatey with pasting following code in your cmd.exe:
-     - ```
-       @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
-       ```
-   - Install wget with cmd command:
-     - ```
-       powershell Invoke-WebRequest -Uri "https://eternallybored.org/misc/wget/1.21.4/64/wget.exe" -OutFile "wget.exe" 
-       ```
-   - Download Compiled files:
-     - ```
-       wget -F -q --no-hsts https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/fansly.exe -O fansly.exe
-       wget -F -q --no-hsts https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/config.ini -O config.ini
-       wget -F -q --no-hsts https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/Multi_Downloader.exe -O Multi_Downloader.exe
-       ```
-   - Install Python 3.10 with this cmd command:
-     - ````
-       choco install python311 -y
-       ````
-   - Then install:
-     - ```
-       pip install --upgrade pip
-       pip install yt-dlp -y
-       pip install spotdl -y
-       ```
-   - Now Download FFmpeg:
-     - ```
-       wget -F -q --no-hsts https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip -O ffmpeg-master-latest-win64-gpl.zip
-       tar -xf ffmpeg-master-latest-win64-gpl.zip
-       del /S /q ffmpeg-master-latest-win64-gpl.zip
-       cd ffmpeg-master-latest-win64-gpl\bin
-       xcopy * ..\.. /s /e /Y
-       cd ..\.. 
-       rd /S /q ffmpeg-master-latest-win64-gpl
-       cd .. 
-       ```
-   - Finally Set the Variable PATHs:
-     - ```
-       mkdir "C:\Saoas" 
-       copy "lib\*.exe" "C:\Saoas" 
-       rd /S /q lib 
-       cd "C:\Saoas" 
-       setx PATH "C:\Saoas;%PATH%" 
-       ```
-
-__2. Auto Method:__ 
+## Installation
+__Auto Method:__ 
   > *Anti Virus maybe says Positive cuz it downloads and Installs into System Path, like the Manual Method*
    - Just Download and Execute Installer!
      - [Installer](https://github.com/SaoasBlubb/Multi-Downloader/releases/latest/download/Installer.exe)

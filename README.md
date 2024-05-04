@@ -1,47 +1,17 @@
-# Multi Downloader
-- A Downloader Tool for Downloading Songs, Videos, Playlists from Spotify, YouTube, Soundcloud, Twitch and any other Website!
 
-## Installation
-__Auto Method:__ 
-  > *Anti Virus maybe says Positive cuz it downloads and Installs into System Path, like the Manual Method*
-   - Just Download, Extract and Execute Installer!
-     - [Files](https://github.com/SaoasBlubb/Multi-Downloader/releases/download/v6.0.0/Downloader.zip)
 
-### In Action
-- __Main Menu and Update!__
+# OUTDATED!!!
+- The Updated Version is included in the Toolbox!!!
+- You get it [HERE](https://github.com/SaoasBlubb/Saoas_Toolbox)
 
-  ![Main Menu](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/63e35edc-7dd1-44b9-97ea-9ec98451aabd)
 
-  ![Update](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/97908d06-1b9f-4309-8361-bd65e5e7bfba)
-#
-- __YouTube Menu!__
+## Here some Pictures!
 
-  ![YouTube Main](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/87c3e22d-bad9-4201-a6b5-b161b10ea79a)
-
-  ![YouTube Audio Menu](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/8d81457f-7560-4195-8f4a-3529438a5b21)
-
-  ![YouTube Video Menu](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/426c9fa3-a8eb-4968-a1af-2463ec0f431b)
-  - __YouTube Download!__
-  
-  ![YouTube Audio Playlist Download](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/b8835d8c-d5fd-408f-a739-a05f8a6040a9)
-#
-- __Spotify Menu!__
-
-  ![Spotify Main](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/f21b3341-45b8-4ec6-a493-345bd34ff7e8)
-  - __Spotify Download!__
-  
-  ![Spotify Artist Download](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/25e20721-9cc0-4ec9-8af3-f9d5fdcfff8d)
-#
-- __SoundCloud Menu!__
-
-  ![SoundCloud Main](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/3b6abaf8-d4ff-4bcb-ace5-0b159b052fa6)
-  - __SoundCloud Download!__
- 
-  ![SoundCloud Playlist Download](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/81e4a2bf-0885-4de6-9fe5-07c5bdc00dd9)
-#
-- __Website Menu!__
-
-  ![Website Main](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/a80ea59c-b0b1-4a5a-9bf1-cc0822fe79ec)
-  - __Fansly Download!__
-  
-  ![Fansly](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/ee609123-fefb-49c1-8c4d-fc07cbbf1bb2)
+![Multi_Downloader_Update_v 6 0 0](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/04fa5b14-52ea-47b4-8cfd-28cbf5632547)
+![Website_Downloader_Menu_v 6 0 0](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/b3e29d10-def1-4d28-a1ed-faa120085b5f)
+![SoundCloud_Downloader_Menu_v 6 0 0](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/764ec2c3-6ca9-4f26-b6d2-394624dfa174)
+![Spotify_Downloader_Menu_v 6 0 0](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/7ed747ca-2aeb-4197-988d-a95221b49deb)
+![YouTube_Video_Download_Menu_v 6 0 0](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/d33d84cc-0a30-4e67-930d-619eef4dd574)
+![YouTube_Audio_Download_Menu_v 6 0 0](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/c2bd12b7-a3b4-47ac-a22f-ebb3d8a3bae7)
+![YouTube_Downloader_Menu_v 6 0 0](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/6add29f0-b160-4e6a-bc1a-01a16d55489b)
+![Multi_Downloader_MAin_Menu_v 6 0 0](https://github.com/SaoasBlubb/Multi-Downloader/assets/56938581/5add6a58-18ad-414c-8f67-2499526fd59f)
